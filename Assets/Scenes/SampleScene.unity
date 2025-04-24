@@ -4123,6 +4123,66 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 1
+--- !u!1 &443555125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 443555127}
+  - component: {fileID: 443555126}
+  m_Layer: 0
+  m_Name: Dialog1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &443555126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443555125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75656ee41a1855443b78fd8a0a2f637e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Hallo, wie gehts dir?
+  choices:
+  - name: Gut
+    nextLine: {fileID: 1796599394}
+    onChosen:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: Schlecht
+    nextLine: {fileID: 1886249313}
+    onChosen:
+      m_PersistentCalls:
+        m_Calls: []
+  characterName: Mario
+  characterPortrait: {fileID: 0}
+--- !u!4 &443555127
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 443555125}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 23.34, y: -1.11, z: 8.71}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1796599395}
+  - {fileID: 1886249314}
+  m_Father: {fileID: 1630930098}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &494650293
 Mesh:
   m_ObjectHideFlags: 0
@@ -10019,6 +10079,54 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -181.119, z: 0}
+--- !u!1 &1129597704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1129597705}
+  - component: {fileID: 1129597706}
+  m_Layer: 0
+  m_Name: Dialog_Blablabla
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1129597705
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129597704}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1500227516}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1129597706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129597704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75656ee41a1855443b78fd8a0a2f637e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: ...
+  choices: []
+  characterName: Joao
+  characterPortrait: {fileID: 0}
 --- !u!1 &1254375582
 GameObject:
   m_ObjectHideFlags: 0
@@ -10335,7 +10443,7 @@ Transform:
   m_GameObject: {fileID: 1336494373}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -23.7, y: 1.004, z: 0.7}
+  m_LocalPosition: {x: -23.7, y: 1.004, z: -4.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10364,7 +10472,7 @@ CharacterController:
   m_Height: 2
   m_Radius: 0.5
   m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_StepOffset: 0.4
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
@@ -10415,6 +10523,8 @@ MonoBehaviour:
   controller: {fileID: 1336494375}
   cameraManager: {fileID: 1385884394}
   speed: 7
+  gravity: 40
+  yVelocity: 0
 --- !u!1 &1385884393
 GameObject:
   m_ObjectHideFlags: 0
@@ -10853,6 +10963,60 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1500227515
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1500227516}
+  - component: {fileID: 1500227517}
+  m_Layer: 0
+  m_Name: Dialog1.2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1500227516
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500227515}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1129597705}
+  m_Father: {fileID: 1886249314}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1500227517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1500227515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75656ee41a1855443b78fd8a0a2f637e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Was ist passiert?
+  choices:
+  - name: Bla bla bla
+    nextLine: {fileID: 1129597706}
+    onChosen:
+      m_PersistentCalls:
+        m_Calls: []
+  characterName: Mario
+  characterPortrait: {fileID: 0}
 --- !u!1 &1530962551
 GameObject:
   m_ObjectHideFlags: 0
@@ -11033,10 +11197,11 @@ GameObject:
   - component: {fileID: 1630930097}
   - component: {fileID: 1630930096}
   - component: {fileID: 1630930095}
-  - component: {fileID: 1630930099}
   - component: {fileID: 1630930100}
+  - component: {fileID: 1630930099}
+  - component: {fileID: 1630930101}
   m_Layer: 0
-  m_Name: NPC
+  m_Name: NPC_Mario
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11130,7 +11295,8 @@ Transform:
   m_LocalPosition: {x: -23.34, y: 1.11, z: -8.71}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 443555127}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1630930099
@@ -11145,6 +11311,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48be5d1a2b2cf2246a117873122d5f83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interacted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1630930101}
+        m_TargetAssemblyTypeName: NPC, Assembly-CSharp
+        m_MethodName: StartDialog
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!135 &1630930100
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11166,6 +11347,19 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1630930101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630930094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2be28ee92ece3fb41ac70f4a6ab29fba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextLine: {fileID: 443555126}
 --- !u!1001 &1714007115
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11341,6 +11535,55 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 13.87, y: 279.185, z: 0.041}
+--- !u!1 &1796599393
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1796599395}
+  - component: {fileID: 1796599394}
+  m_Layer: 0
+  m_Name: Dialog1_Gut
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1796599394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796599393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75656ee41a1855443b78fd8a0a2f637e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Mir gehts gut
+  choices: []
+  characterName: Joao
+  characterPortrait: {fileID: 0}
+--- !u!4 &1796599395
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1796599393}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1953264771}
+  m_Father: {fileID: 443555127}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1802663398
 GameObject:
   m_ObjectHideFlags: 0
@@ -11464,6 +11707,103 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 1385884394}
   camera: {fileID: 1530962552}
+--- !u!1 &1886249312
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1886249314}
+  - component: {fileID: 1886249313}
+  m_Layer: 0
+  m_Name: Dialog1_Schlecht
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1886249313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886249312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75656ee41a1855443b78fd8a0a2f637e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Leider nicht so gut
+  choices: []
+  characterName: Joao
+  characterPortrait: {fileID: 0}
+--- !u!4 &1886249314
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886249312}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1500227516}
+  m_Father: {fileID: 443555127}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1953264770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1953264771}
+  - component: {fileID: 1953264772}
+  m_Layer: 0
+  m_Name: Dialog1.1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1953264771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953264770}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1796599395}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1953264772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953264770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75656ee41a1855443b78fd8a0a2f637e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: Das freut mich
+  choices: []
+  characterName: Mario
+  characterPortrait: {fileID: 0}
 --- !u!1 &2009697505
 GameObject:
   m_ObjectHideFlags: 0
