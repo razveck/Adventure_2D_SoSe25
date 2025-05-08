@@ -22,17 +22,17 @@ public class Player : MonoBehaviour {
 		moveAction = input.currentActionMap.FindAction("Move");
 		interactAction = input.currentActionMap.FindAction("Interact");
 		//C# events
-		interactAction.performed += OnInteract;
+		interactAction.performed += OnInteracted;
 		
 
 		referenceCamera = cameraManager.activeCamera.transform;
 	}
 
 	private void OnDestroy() {
-		interactAction.performed -= OnInteract;
+		interactAction.performed -= OnInteracted;
 	}
 
-	private void OnInteract(InputAction.CallbackContext obj) {
+	private void OnInteracted(InputAction.CallbackContext obj) {
 		if(currentInteractable != null){
 			currentInteractable.Interact();
 		}
