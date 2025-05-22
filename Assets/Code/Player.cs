@@ -12,10 +12,13 @@ public class Player : MonoBehaviour {
 	public PlayerInput input;
 	public CharacterController controller;
 	public CameraManager cameraManager;
+	public Animator animator;
 
 	public float speed = 7f;
 	public float gravity = 9.81f;
 	public float yVelocity;
+
+	//public FMODUnity.StudioEventEmitter emitter;
 
 	// Start is called once before the first execution of Update after the MonoBehaviour is created
 	void Start() {
@@ -26,6 +29,9 @@ public class Player : MonoBehaviour {
 		
 
 		referenceCamera = cameraManager.activeCamera.transform;
+
+		//emitter.Play();
+		//emitter.Stop();
 	}
 
 	private void OnDestroy() {
@@ -35,6 +41,7 @@ public class Player : MonoBehaviour {
 	private void OnInteracted(InputAction.CallbackContext obj) {
 		if(currentInteractable != null){
 			currentInteractable.Interact();
+			animator.SetTrigger("interact");
 		}
 	}
 
@@ -43,7 +50,6 @@ public class Player : MonoBehaviour {
 		if(moveAction.WasPressedThisFrame()) {
 			referenceCamera = cameraManager.activeCamera.transform;
 		}
-
 
 		Vector2 moveInput = moveAction.ReadValue<Vector2>();
 
@@ -61,6 +67,8 @@ public class Player : MonoBehaviour {
 
 		move*= speed;
 
+		//animator.SetFloat("speedZ", move.magnitude);
+
 		yVelocity -= gravity * Time.deltaTime;
 		move.y = yVelocity;
 
@@ -69,6 +77,8 @@ public class Player : MonoBehaviour {
 
 		//if(controller.isGrounded)
 		//	yVelocity = 0;
+
+		animator.SetFloat("speedZ", Mathf.Abs(moveInput.magnitude * speed));
 	}
 
 	private void OnTriggerEnter(Collider other) {
