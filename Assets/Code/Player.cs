@@ -26,7 +26,7 @@ public class Player : MonoBehaviour {
 		interactAction = input.currentActionMap.FindAction("Interact");
 		//C# events
 		interactAction.performed += OnInteracted;
-		
+
 
 		referenceCamera = cameraManager.activeCamera.transform;
 
@@ -39,7 +39,7 @@ public class Player : MonoBehaviour {
 	}
 
 	private void OnInteracted(InputAction.CallbackContext obj) {
-		if(currentInteractable != null){
+		if(currentInteractable != null) {
 			currentInteractable.Interact();
 			animator.SetTrigger("interact");
 		}
@@ -53,19 +53,19 @@ public class Player : MonoBehaviour {
 
 		Vector2 moveInput = moveAction.ReadValue<Vector2>();
 
-		
+
 		Vector3 forward = Vector3.ProjectOnPlane(referenceCamera.forward, Vector3.up).normalized;
 		Vector3 right = Vector3.ProjectOnPlane(referenceCamera.right, Vector3.up).normalized;
 		//wie viel auf right + wie viel auf forward
 		Vector3 move = right * moveInput.x + forward * moveInput.y;
-		
+
 
 		if(move != Vector3.zero) {
 			transform.forward = Vector3.Slerp(transform.forward, move, 0.1f);
-			
+
 		}
 
-		move*= speed;
+		move *= speed;
 
 		//animator.SetFloat("speedZ", move.magnitude);
 
@@ -83,20 +83,26 @@ public class Player : MonoBehaviour {
 
 	private void OnTriggerEnter(Collider other) {
 		Interactable interactable = other.GetComponent<Interactable>(); //auf 'other' nach 'Interactable' suchen
+
 		//wenn 'other' kein 'Interactable' hat, wird die Variabel null
-		if(interactable != null)
+		if(interactable != null) {
 			currentInteractable = interactable; //wir merken uns dann den Script, für später ;)
+			interactable.SetHighlight(true);
+		}
 	}
 
 	private void OnTriggerExit(Collider other) {
 		Interactable interactable = other.GetComponent<Interactable>(); //auf 'other' nach 'Interactable' suchen
+
 		//wenn 'other' kein 'Interactable' hat, wird die Variabel null
-		if(interactable != null)
+		if(interactable != null) {
 			currentInteractable = null; //wir merken uns dann den Script, für später ;)
+			interactable.SetHighlight(false);
+		}
 	}
 
 	//statt OnCollisionEnter
 	private void OnControllerColliderHit(ControllerColliderHit hit) {
-		
+
 	}
 }

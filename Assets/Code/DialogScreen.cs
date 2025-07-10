@@ -70,7 +70,7 @@ public class DialogScreen : MonoBehaviour {
 		//	dialogText.text = finalText.Substring(0, i);
 		//	yield return new WaitForSeconds(0.05f);
 		//}
-
+		
 		//optimale Lösung
 		dialogText.maxVisibleCharacters = 0;
 		for(int i = 0; i < dialogText.text.Length; i++) {
