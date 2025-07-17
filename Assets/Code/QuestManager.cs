@@ -29,6 +29,8 @@ public class QuestManager : MonoBehaviour {
 		yield return WaitForNPC(luigi);
 
 		Debug.Log("Quest Done");
+
+		luigi.GetComponent<NPC>().nextLine = dialogQuest1;
 	}
 
 	IEnumerator WaitForNPC(Interactable interactable){
