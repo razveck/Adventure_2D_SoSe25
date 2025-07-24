@@ -11,7 +11,7 @@ public class MainMenu : MonoBehaviour {
 		startBtn.onClick.AddListener(() => {
 			SceneManager.LoadScene(1);
 			MusicSystem.music.setParameterByNameWithLabel("Scene", "Level");
-
+			Time.timeScale = 1f;
 		}
 		);
 	}

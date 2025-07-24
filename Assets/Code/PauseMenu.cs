@@ -18,7 +18,12 @@ public class PauseMenu : MonoBehaviour {
 
 	// Start is called once before the first execution of Update after the MonoBehaviour is created
 	IEnumerator Start() {
-		exit.onClick.AddListener(() => SceneManager.LoadScene(0));
+		exit.onClick.AddListener(() => {
+			input.actions.FindActionMap("Player").FindAction("Pause").performed -= OnPaused;
+			input.actions.FindActionMap("UI").FindAction("Pause").performed -= OnPaused;
+			SceneManager.LoadScene(0);
+
+		});
 
 
 		input.actions.FindActionMap("Player").FindAction("Pause").performed += OnPaused;
@@ -30,8 +35,10 @@ public class PauseMenu : MonoBehaviour {
 	}
 
 	private void OnDisable() {
-		input.actions.FindActionMap("Player").FindAction("Pause").performed -= OnPaused;
-		input.actions.FindActionMap("UI").FindAction("Pause").performed -= OnPaused;
+		if(input != null) {
+			input.actions.FindActionMap("Player").FindAction("Pause").performed -= OnPaused;
+			input.actions.FindActionMap("UI").FindAction("Pause").performed -= OnPaused;
+		}
 	}
 
 	private void OnPaused(InputAction.CallbackContext obj) {
